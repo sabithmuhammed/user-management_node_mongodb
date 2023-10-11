@@ -1,0 +1,27 @@
+<%- include('../partials/user_partials/userHeader') %>
+
+<div class="container-fluid h-100 d-flex">
+    <div class="container bg-body-secondary align-self-center rounded rounded-3 px-5 py-4 container-login">
+        <h2>Login</h2>
+        <div class="error">
+          <% if(locals.message){ %>
+            <div class="error-msg <%=color %>"><%= message %></div>
+            <% } %>
+        </div>
+       
+        <form method="post" action="/login">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control border border-dark" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control border border-dark" id="exampleInputPassword1" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <div class="text-center mt-2">Don't have an account yet? <a href="/signup">Sign up</a></div>
+          </form>
+    </div>
+</div>
+
+<%- include('../partials/user_partials/userFooter') %>

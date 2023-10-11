@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url('/img/admin_bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.error{
+    height: 40px;
+    
+}
+.error-msg{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.red{
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 0, 0, 0.218);
+    border: 2px solid rgb(230, 135, 135);
+}
+.green{
+    color: rgb(0, 0, 0);
+    background-color: rgba(45, 234, 95, 0.374);;
+    border: 2px solid rgb(30, 244, 87);;
+}
+.row{
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr repeat(2,3fr) 2fr 3fr;
+}
+.row > div {
+    /* border: 2px solid white; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.go-back{
+    position: absolute;
+    left: 20px;
+    top: 100px;
+}
+#form1::placeholder{
+    color: white!important
+}
